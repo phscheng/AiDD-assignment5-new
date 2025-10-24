@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phyllis Cheng - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
@@ -17,11 +17,11 @@
                         <span></span>
                     </div>
                     <ul class="nav-menu" id="nav-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Me</a></li>
+                        <li><a href="{{ url_for('resume') }}">Resume</a></li>
+                        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,8 +39,8 @@
                 
                 <p>My journey combines academic excellence with real-world experience at Fortune 500 companies like Target and Merck, where I've led process improvements, analyzed complex data sets, and delivered strategic recommendations that impact millions in revenue.</p>
                 
-                <div style="margin-top: 2rem;">
-                    <a href="about.html" class="submit-btn">Learn More About Me</a>
+                    <div style="margin-top: 2rem;">
+                    <a href="{{ url_for('about') }}" class="submit-btn">Learn More About Me</a>
                 </div>
             </section>
 
@@ -60,9 +60,9 @@
                         <p>Collaborating with cross-functional teams to develop innovative solutions that address complex business challenges.</p>
                     </div>
                     <br>
-                    <div style="margin-top: 2rem;">
-                        <a href="resume.html" class="submit-btn">View Resume</a>
-                    </div>
+                        <div style="margin-top: 2rem;">
+                    <a href="{{ url_for('resume') }}" class="submit-btn">View Resume</a>
+                </div>
                 </div>
             </section>
 
@@ -70,7 +70,7 @@
                 <h2>Featured Projects</h2>
                 <p>Explore my professional experiences and academic projects that demonstrate my expertise in data analysis, supply chain management, business intelligence, and creativity.</p>
                 <div style="margin-top: 2rem;">
-                    <a href="projects.html" class="submit-btn">View All Projects</a>
+                    <a href="{{ url_for('projects') }}" class="submit-btn">View All Projects</a>
                 </div>
             </section>
 
@@ -78,7 +78,7 @@
                 <h2>Let's Connect</h2>
                 <p>I'm always interested in new opportunities, collaborations, and meaningful conversations. I'd love to hear from you!</p>
                 <div style="margin-top: 2rem;">
-                    <a href="contact.html" class="submit-btn">Contact Information</a>
+                    <a href="{{ url_for('contact') }}" class="submit-btn">Contact Information</a>
                 </div>
             </section>
         </main>
